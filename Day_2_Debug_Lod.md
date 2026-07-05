@@ -1,5 +1,3 @@
-```markdown
-
 # Day2 Debug Log: KamaClaude 环境迁移、WSL2 安装与中转 API 配置连环踩坑实录
 
 
