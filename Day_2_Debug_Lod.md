@@ -198,10 +198,10 @@ BrokenPipeError: [Errno 32] Broken pipe
 
 
 
-* 服务端（窗口 A）：`export $(grep -v '^#' .env | xargs) && uv run kama-core`
+* 服务端（窗口 A）：`export $(cat .env | xargs) && uv run kama-core`
 
-* 客户端（窗口 B）：`export $(grep -v '^#' .env | xargs) && uv run kama run --goal "..."`
-原理解析：grep -v '^#' .env 的意思是“帮我把 .env 文件里所有以 # 开头的注释行全部过滤掉，只留下真正的配置项”。这样再去 export 就绝对不会报错了
+* 客户端（窗口 B）：`export $(cat .env | xargs) && uv run kama run --goal "..."`
+
 
 
 
